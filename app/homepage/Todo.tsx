@@ -40,14 +40,14 @@ const Todo = () => {
   return (
     <div className="w-full bg-gradient-to-r from-slate-100 to-slate-200 py-10">
       <div className="max-w-4xl w-full flex flex-col align-middle mx-auto justify-center items-center gap-6">
-        <h1 className="font-bold text-3xl text-center font-kanit">
+        <h1 className="font-bold text-3xl sm:text-xl text-center font-kanit">
           Want to follow your Representative?
         </h1>
         <div  className="flex flex-row gap-4 sm:flex-col px-4">
           {navData.map((data) => (
             <ul key={data.id} className="flex flex-col justify-center gap-4 items-center align-middle p-4 shadow-md bg-white rounded-md">
-              <h1 className="text-center text-lg font-semibold font-kanit">{data.description}</h1>
-              <h4 className="text-center text-slate-600 font-montserrat">{data.content}</h4>
+              <h1 className="text-center text-lg sm:text-sm font-semibold font-kanit">{data.description}</h1>
+              <h4 className="text-center text-slate-600 font-montserrat sm:text-xs">{data.content}</h4>
               <Button asChild>
                 <Link href={data.url} className="btn btn-primary font-kanit">
                   {data.name}

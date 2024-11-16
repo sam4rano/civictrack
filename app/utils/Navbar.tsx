@@ -2,7 +2,7 @@
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { HiOutlineViewList, HiOutlineMenu } from "react-icons/hi";
+import {  HiOutlineMenu } from "react-icons/hi";
 import { useCallback } from "react";
 import { usePathname } from "next/navigation";
 

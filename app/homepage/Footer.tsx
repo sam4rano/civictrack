@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
           {/* Company Values Section */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Our Values</h4>
-            <ul className="space-y-2">
+            <ul className="space-y-2 sm:text-sm">
               <li>Integrity</li>
               <li>Collaboration</li>
               <li>Fairness</li>
@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
           {/* Quick Links Section */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
+            <ul className="space-y-2 sm:text-sm">
               <li><a href="/about" className="hover:underline">About Us</a></li>
               <li><a href="/services" className="hover:underline">Our Services</a></li>
               <li><a href="/partners" className="hover:underline">Partners</a></li>
@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Contact Information Section */}
-          <div>
+          <div className='sm:text-sm sm:w-full'>
             <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
             <p className="mb-2">123 Business Ave, Suite 456</p>
             <p className="mb-2">City, State, Zip Code</p>
@@ -70,7 +70,7 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Footer Bottom */}
-        <div className="border-t border-gray-700 pt-4 flex md:flex-row items-center justify-between w-full flex-row">
+        <div className="border-t border-gray-700 pt-4 flex md:flex-row items-center justify-between w-full flex-row sm:text-sm">
           <p>&copy; {new Date().getFullYear()} CivicTrack. All rights reserved.</p>
           <ul className="flex space-x-2 mt-4 md:mt-0">
             <li><a href="/privacy-policy" className="hover:underline">Privacy Policy</a></li>

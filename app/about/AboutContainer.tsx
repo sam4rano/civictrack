@@ -11,7 +11,7 @@ const AboutContainer = () => {
 		</div>
 		<div className="absolute inset-0 flex justify-center align-middle items-center flex-col sm:gap-4 font-kanit">
 			<h1 className="text-2xl font-bold text-white">ABOUT US</h1>
-			<h2 className="text-4xl font-bold text-rose-600 sm:text-center sm:text-2xl">following our leader at <span className="text-blue-400 ">CivicTrack</span></h2>
+			<h2 className="text-4xl font-bold text-rose-600 sm:text-white sm:text-center sm:text-2xl">following our leaders at <span className="text-blue-400 sm:text-rose-600">CivicTrack</span></h2>
 		</div>
 	</div>
   )

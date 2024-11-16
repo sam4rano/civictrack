@@ -66,13 +66,13 @@ export default async function Page({
         />
       </div>
 
-      <div className="max-w-4xl mx-auto py-8 px-4 prose prose-blue prose-xl">
+      <div className="max-w-4xl mx-auto py-4 px-4 prose prose-blue prose-xl sm:prose-sm sm:flex sm:justify-center sm:align-middle sm:items-center sm:flex-col">
         <div className="flex flex-row gap-2 justify-center align-middle items-center font-kanit">
           <h1 className="text-2xl font-bold text-center">{data.title}</h1>
 
           <h1 className="font-bold text-2xl">{data.name}</h1>
         </div>
-        <div className="font-montserrat">
+        <div className="font-montserrat sm:text-sm">
           <p>
             <strong>Position:</strong> {data.position}
           </p>
@@ -89,8 +89,13 @@ export default async function Page({
             <strong>Term Duration Tracking:</strong> {data.termDurationTracking}
             years
           </p>
+          <p>
+            <strong>Education history:</strong>{" "}
+            {data.educationalBackground}
+            
+          </p>
         </div>
-        <div className="font-montserrat">
+        <div className="font-montserrat sm:flex sm:flex-col sm:justify-center sm:items-center sm:align-middle">
           <h3>Responsibilities</h3>
           <PortableText value={data.responsibilities} />
 
@@ -99,8 +104,6 @@ export default async function Page({
 
           <h3>Projects</h3>
           <PortableText value={data.projects} />
-
-          <h3>Educational Background {data.educationalBackground}</h3>
         </div>
       </div>
       <Footer />

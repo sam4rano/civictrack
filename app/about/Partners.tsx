@@ -27,7 +27,7 @@ const Partners: React.FC = () => {
   return (
     <section className="text-center py-10 bg-slate-100">
       <h2 className="text-2xl font-semibold mb-4 font-kanit">CivicTrack Partners</h2>
-      <Carousel className="relative max-w-4xl mx-auto">
+      <Carousel className="relative max-w-4xl mx-auto sm:px-4">
         <CarouselContent className="flex gap-4">
           {partners.map((partner) => (
             <CarouselItem key={partner.id} className="flex-shrink-0 w-full md:w-1/3">
