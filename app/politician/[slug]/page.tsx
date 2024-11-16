@@ -67,37 +67,41 @@ export default async function Page({
       </div>
 
       <div className="max-w-4xl mx-auto py-8 px-4 prose prose-blue prose-xl">
-        <div className="flex flex-row gap-2 justify-center align-middle items-center">
+        <div className="flex flex-row gap-2 justify-center align-middle items-center font-kanit">
           <h1 className="text-2xl font-bold text-center">{data.title}</h1>
 
           <h1 className="font-bold text-2xl">{data.name}</h1>
         </div>
-        <p>
-          <strong>Position:</strong> {data.position}
-        </p>
-        <p>
-          <strong>Region Represented:</strong> {data.regionRepresented}
-        </p>
-        <p>
-          <strong>State From:</strong> {data.stateFrom}
-        </p>
-        <p>
-          <strong>Current Position:</strong> {data.currentPosition}
-        </p>
-        <p>
-          <strong>Term Duration Tracking:</strong> {data.termDurationTracking}
-        </p>
+        <div className="font-montserrat">
+          <p>
+            <strong>Position:</strong> {data.position}
+          </p>
+          <p>
+            <strong>Region Represented:</strong> {data.regionRepresented}
+          </p>
+          <p>
+            <strong>State From:</strong> {data.stateFrom}
+          </p>
+          <p>
+            <strong>Current Position:</strong> {data.currentPosition}
+          </p>
+          <p>
+            <strong>Term Duration Tracking:</strong> {data.termDurationTracking}
+            years
+          </p>
+        </div>
+        <div className="font-montserrat">
+          <h3>Responsibilities</h3>
+          <PortableText value={data.responsibilities} />
 
-        <h3>Responsibilities</h3>
-        <PortableText value={data.responsibilities} />
+          <h3>Contact Information</h3>
+          <p>{data.contactInformation}</p>
 
-        <h3>Contact Information</h3>
-        <p>{data.contactInformation}</p>
+          <h3>Projects</h3>
+          <PortableText value={data.projects} />
 
-        <h3>Projects</h3>
-        <PortableText value={data.projects} />
-
-        <h3>Educational Background {data.educationalBackground}</h3>
+          <h3>Educational Background {data.educationalBackground}</h3>
+        </div>
       </div>
       <Footer />
     </>

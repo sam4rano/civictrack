@@ -53,12 +53,12 @@ const Values = () => {
   ];
 
   return (
-    <section className="text-center py-16 bg-white">
-      <h2 className="text-3xl font-semibold mb-4">Accountability per Excellence</h2>
-      <p className="text-gray-500 mb-12 max-w-2xl mx-auto">
+    <section className="text-center py-16 bg-slate-100">
+      <h2 className="text-3xl font-semibold mb-4 font-kanit">Accountability per Excellence</h2>
+      <p className="text-gray-500 mb-12 max-w-2xl mx-auto font-montserrat">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam bibendum eget morbi dignissim eu pharetra consequat montes, sagittis.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-8">
+      <div className="grid grid-cols-4 md:grid-cols-2 lg:grid-cols-4 gap-8 px-8">
         {values.map((value) => (
           <div key={value.id} className="bg-white shadow-lg p-6 rounded-lg text-center">
             {value.icon}

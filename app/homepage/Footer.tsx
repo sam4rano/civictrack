@@ -2,9 +2,9 @@ import React from 'react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-900 text-white py-10">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-8 ">
+    <footer className="bg-gray-900 text-white py-10 w-full font-montserrat">
+      <div className="container mx-auto px-2">
+        <div className="grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-8 ">
           {/* Company Values Section */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Our Values</h4>
@@ -70,9 +70,9 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Footer Bottom */}
-        <div className="border-t border-gray-700 pt-4 flex flex-col md:flex-row items-center justify-between">
+        <div className="border-t border-gray-700 pt-4 flex md:flex-row items-center justify-between w-full flex-row">
           <p>&copy; {new Date().getFullYear()} CivicTrack. All rights reserved.</p>
-          <ul className="flex space-x-4 mt-4 md:mt-0">
+          <ul className="flex space-x-2 mt-4 md:mt-0">
             <li><a href="/privacy-policy" className="hover:underline">Privacy Policy</a></li>
             <li><a href="/terms-of-service" className="hover:underline">Terms of Service</a></li>
           </ul>

@@ -40,10 +40,10 @@ export default async function page() {
   return (
     <div>
       <Navbar />
-      <div className="flex flex-row justify-center items-center align-middle gap-4 py-8 bg-slate-200 sm:flex-col sm:gap-4">
+      <div className="flex flex-row justify-center items-center align-middle gap-4 py-8 bg-slate-200 sm:flex-col sm:gap-4 px-8">
         {data.map((item) => (
-          <Card key={item.currentSlug}>
-            <div className="w-80 h-80">
+          <Card key={item.currentSlug} className="sm:w-full sm:flex sm:flex-col sm:justify-center sm:align-middle sm:items-center">
+            <div className="w-72 h-72 flex align-middle items-center justify-center">
               <Image
                 src={urlFor(item.titleImage).url()}
                 alt={item.title}
@@ -52,15 +52,15 @@ export default async function page() {
               />
             </div>
             <CardContent className="p-4">
-              <div className="flex flex-row gap-2 justify-center align-middle items-center">
+              <div className="flex flex-row gap-2 justify-center align-middle items-center font-kanit">
                 <h1>{item.title}</h1>
                 <h1>{item.name}</h1>
               </div>
-              <div className="flex flex-col justify-center align-middle items-center gap-4">
+              <div className="flex flex-row justify-center align-middle items-center gap-4 font-montserrat">
                 <h1>{item.stateFrom}</h1>
                 <h1>{item.regionRepresented}</h1>
               </div>
-              <Button asChild className="w-full mt-4 px-4">
+              <Button asChild className="w-full mt-4 px-4 sm:px-0 font-kanit">
                 <Link href={`politician/${item.currentSlug}`}>Read more</Link>
               </Button>
             </CardContent>

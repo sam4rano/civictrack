@@ -50,14 +50,14 @@ export default function Navbar() {
 
   const isActive = useCallback((path: string) => pathname === path, [pathname]);
   return (
-    <header className="flex flex-row justify-between mx-auto align-middle h-16 w-full shrink-0 items-center px-4 md:px-6">
+    <header className="flex flex-row justify-between mx-auto align-middle h-16 w-full shrink-0 items-center px-4 md:px-6 font-kanit">
       <Link href={'/'}>
       <h2 className="text-3xl ">CivicTrack</h2>
       </Link>
       <Sheet>
         <SheetTrigger asChild>
-          <Button variant="outline" size="icon" className="lg:hidden">
-            <HiOutlineViewList className="h-6 w-6" />
+          <Button variant="outline" size="icon" className="lg:hidden xl:hidden">
+            <HiOutlineMenu className="h-6 w-6" />
             <span className="sr-only">Toggle navigation menu</span>
           </Button>
         </SheetTrigger>
@@ -71,7 +71,7 @@ export default function Navbar() {
               <ul key={data.id} className="list-none">
                 <Link
               href={data.url}
-              className={`group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 ${
+              className={`group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 font-kanit ${
                 isActive(data.url)
                   ? "text-pink-500"
                   : "text-black dark:text-white"

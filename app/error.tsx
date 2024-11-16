@@ -10,7 +10,7 @@ type ErrorProps = {
 
 const error: React.FC<ErrorProps> = ({ refresh }) => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-custom-dark  text-white">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-custom-dark  text-white font-kanit">
       <div className="max-w-lg text-center flex flex-col">
         <h1 className="text-6xl font-bold mb-4">Oops!</h1>
         <p className="text-xl mb-8">
