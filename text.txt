@@ -1,0 +1,109 @@
+Here's a comprehensive "About Us" section for the CivicTrack web app:
+Welcome to CivicTrack
+We're a team of civic-minded individuals who believe in the power of technology to increase transparency and accountability in government. Our mission is to provide a platform that empowers citizens to track the activities of their local representatives, monitor ongoing projects, and access critical information about their community.
+Our Features
+Authentication & User Management: Create an account and log in to access personalized features, save your search preferences, and provide feedback on politician profiles and project information.
+Politician Directory: Browse detailed profiles of your local representatives, including their biographical information, current positions, and historical records.
+Tracking System: Stay up-to-date on ongoing and completed projects in your community, with features like milestone tracking, budget allocation, and progress updates.
+Campaign Promises Tracker: Monitor the progress of politicians' promises, with categorization by sector, status tracking, and evidence repositories.
+Search and Filter Functionality: Quickly find specific information about politicians, projects, or regions using our intuitive search bar and filter options.
+Our Goal
+At CivicTrack, we're committed to providing a user-friendly platform that bridges the gap between citizens and their government. We believe that by increasing transparency and accountability, we can foster a more engaged and informed community.
+Join Us
+Explore our platform today and discover how you can make a difference in your community! [Insert Call-to-Action button: "Get Started" or "Learn More"]
+
+
+
+*[_type == 'politician'] | order(_createdAt desc) {
+  name,
+    titleImage,
+    title,
+    position,
+    regionRepresented
+	  }
+
+
+export default {
+  name: 'politician',
+  type: 'document',
+  title: 'Politician',
+  fields: [
+    {
+      name: 'name',
+      type: 'string',
+      title: 'Name',
+    },
+    {
+      name: 'slug',
+      type: 'slug',
+      title: 'slug of politician',
+      options: {
+        source: 'title',
+      },
+    },
+	{
+		name:'titleImage',
+		type:'image',
+		title:'image title of politician'
+	},
+    {
+      name: 'title',
+      type: 'string',
+      title: 'Title',
+    },
+    {
+      name: 'position',
+      type: 'string',
+      title: 'Position',
+    },
+    {
+      name: 'regionRepresented',
+      type: 'string',
+      title: 'Region Represented',
+    },
+    {
+      name: 'stateFrom',
+      type: 'string',
+      title: 'state name',
+    },
+    {
+      name: 'currentPosition',
+      type: 'text',
+      title: 'Current Position',
+    },
+	{
+		name:'responsibilities',
+		type:'array',
+		title:'Content',
+		of: [{
+			type:'block'
+		},
+	],
+	},
+    {
+      name: 'projects',
+      type: 'array',
+      title: 'Projects',
+      of: [
+        {
+          type: 'project',
+        },
+      ],
+    },
+    {
+      name: 'contactInformation',
+      type: 'string',
+      title: 'Contact Information',
+    },
+    {
+      name: 'termDurationTracking',
+      type: 'number',
+      title: 'Term Duration Tracking',
+    },
+    {
+      name: 'educationalBackground',
+      type: 'string',
+      title: 'Educational Background',
+    },
+  ],
+}
